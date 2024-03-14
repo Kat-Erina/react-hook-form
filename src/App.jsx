@@ -1,25 +1,26 @@
 import { useForm } from "react-hook-form";
 import "./App.css";
+import StateComp from "./components/StateComp";
 
 function App() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   formState: { errors },
+  // } = useForm();
 
-  console.log(errors.name?.type);
-  console.log(errors.name?.message);
+  // console.log(errors.name?.type);
+  // console.log(errors.name?.message);
 
-  // console.log(useForm());
-  // console.log({ ...register }); - carielia
-  async function submitHandler(data) {
-    console.log(data);
-    console.log(data.name);
-  }
+  // // console.log(useForm());
+  // // console.log({ ...register }); - carielia
+  // async function submitHandler(data) {
+  //   console.log(data);
+  //   console.log(data.name);
+  // }
   return (
     <>
-      <form onSubmit={handleSubmit(submitHandler)}>
+      {/* <form onSubmit={handleSubmit(submitHandler)}>
         <label htmlFor="name">Name</label>
         <input
           className={`${
@@ -66,8 +67,10 @@ function App() {
         ></input>
         <p>{errors.password?.message}</p>
         <button type="submit">Submit</button>
-      </form>
-      <div></div>
+      </form> */}
+      <div>
+        <StateComp></StateComp>
+      </div>
     </>
   );
 }
